@@ -256,8 +256,8 @@ RUN ln -snf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && echo ${TIMEZONE} >
     chown -R www-data:www-data /composer
 
 # copy startup script & DB checking script
-COPY .docker/dbtest.php 
-COPY .docker/entrypoint.sh 
+COPY .docker/dbtest.php /dbtest.php
+COPY .docker/entrypoint.sh /entrypoint.sh
 
 ENV DATABASE_URL="mysql://kimai:kimai@127.0.0.1:3306/kimai?charset=utf8mb4&serverVersion=8.3"
 ENV APP_SECRET=change_this_to_something_unique
