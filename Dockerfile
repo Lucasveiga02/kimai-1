@@ -273,7 +273,7 @@ ENV GROUP_ID=
 ENV COMPOSER_MEMORY_LIMIT=-1
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
-VOLUME [ "/opt/kimai/var" ]
+# VOLUME [ "/opt/kimai/var" ]
 
 CMD [ "/entrypoint.sh" ]
 
